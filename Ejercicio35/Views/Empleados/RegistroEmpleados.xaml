@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio35.Views.Empleados.RegistroEmpleados"
+             NavigationPage.HasNavigationBar="False">
+    <Grid RowDefinitions="80,*"
+          BackgroundColor="#0099AA">
+        <StackLayout Orientation="Horizontal" Margin="10"
+            >
+            <Image Source="https://i.ibb.co/TbMGYX8/image-Flecha.png" HeightRequest="20">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Volvercomand}"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Label Text="Empleados"
+               VerticalOptions="Center"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="30"
+               FontAttributes="Bold"
+               TextColor="#FFF"
+                   />
+
+        </StackLayout>
+        <StackLayout Grid.Row="1" Margin="10">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nombre:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       FontSize="20" ></Label>
+                <Entry Placeholder="Ingrese su nombre"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       FontSize="20"
+                       HorizontalOptions="FillAndExpand"
+                       Text="{Binding Nombre}"></Entry>
+                       
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Apellidos:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       FontSize="20" ></Label>
+                <Entry Placeholder="Ingrese sus apellidos"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       FontSize="20"
+                       HorizontalOptions="FillAndExpand"
+                       Text="{Binding Apellidos}"></Entry>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Edad:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       FontSize="20" ></Label>
+                <Entry Placeholder="Ingrese su eda"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       FontSize="20"
+                       HorizontalOptions="FillAndExpand"
+                       Text="{Binding Edad}"></Entry>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Direccion:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       FontSize="20" ></Label>
+                <Entry Placeholder="Ingrese su direccion"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       FontSize="20"
+                       HorizontalOptions="FillAndExpand"
+                       Text="{Binding Direccion}"></Entry>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Puesto:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       FontSize="20" ></Label>
+                <Entry Placeholder="Ingrese su puesto"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       FontSize="20"
+                       HorizontalOptions="FillAndExpand"
+                       Text="{Binding Puesto}"></Entry>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Foto:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       FontSize="20" ></Label>
+                <Entry Placeholder="Ingrese su foto"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       FontSize="20"
+                       HorizontalOptions="FillAndExpand"
+                       Text="{Binding Foto}"></Entry>
+
+            </StackLayout>
+        
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Image Source="https://i.ibb.co/xzNHS9c/ver.png" HeightRequest="20" ></Image>
+                <Label Text="Vista previa"
+                       TextColor="White"
+                       FontAttributes="Italic"
+                       VerticalOptions="Center"
+                       FontSize="20" ></Label>
+               
+
+            </StackLayout>
+
+            <Grid RowDefinitions="100,*">
+                <Frame Grid.Row="1" WidthRequest="380" HorizontalOptions="Center" CornerRadius="15" BackgroundColor="#D8F3E9"
+                       Margin="0,-30,0,0">
+                    <StackLayout Margin="0,90,0,0">
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Nombre:"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   FontSize="20" >
+                                
+                            </Label>
+                            <Label 
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   HorizontalOptions="FillAndExpand"
+                                   Text="{Binding Nombre}"
+                                   TextColor="Black">
+                            </Label>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Apellidos:"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   FontSize="20" >
+
+                            </Label>
+                            <Label 
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   HorizontalOptions="FillAndExpand"
+                                   Text="{Binding Apellidos}"
+                                   TextColor="Black">
+                            </Label>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Edad:"
+                                   TextColor="Black"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="Center"
+                                   FontSize="20" >
+
+                            </Label>
+                            <Label 
+                                   FontAttributes="Bold"
+                                   FontSize="20"
+                                   HorizontalOptions="FillAndExpand"
+                                   Text="{Binding Edad}"
+                                   TextColor="Black">
+                            </Label>
+
+                        </StackLayout>
+
+
+                    </StackLayout>
+                </Frame>
+                <Image Source="{Binding Foto}" 
+                       Grid.RowSpan="2" HeightRequest="180" VerticalOptions="StartAndExpand"></Image>
+
+            </Grid>
+         
+                <Button Text="Guardar"
+                        HorizontalOptions="Center"
+                        BackgroundColor="#767676"
+                        BorderColor="#e1e1e1"
+                        BorderWidth="6"
+                        CornerRadius="15"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HeightRequest="60"
+                        WidthRequest="250"
+                        FontSize="25"
+                        Command="{Binding Insertarcomand}"
+                        ></Button>
+      
+        </StackLayout>
+        
+    </Grid>
+</ContentPage>

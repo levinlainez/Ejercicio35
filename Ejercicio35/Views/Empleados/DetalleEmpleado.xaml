@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio35.Views.Empleados.DetalleEmpleado"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:sharpnado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0">
+                <GradientStop Color="#FFF" Offset="0.1"></GradientStop>
+                <GradientStop Color="#0099AA" Offset="0.8"></GradientStop>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackLayout>
+            <Image Source="https://i.ibb.co/dbvLPnr/flecha-izquierda.png" HeightRequest="25" HorizontalOptions="Start"
+                   Margin="10,20,0,0"
+                   >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Volvercomand}"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Source="{Binding parametrosRecibe.Foto}" HeightRequest="350" ></Image>
+            <Label Text="{Binding parametrosRecibe.Nombre}" FontSize="40" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"></Label>
+            <Label Text="{Binding parametrosRecibe.Apellidos}" FontSize="40" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" Margin="0,-15,0,0"></Label>
+            <Grid Margin="10,0,10,0">
+                <sharpnado:MaterialFrame CornerRadius="15" MaterialBlurStyle="Light" MaterialTheme="AcrylicBlur"></sharpnado:MaterialFrame>
+                <StackLayout Orientation="Horizontal"  Margin="20, 10, 20, 10">
+                    <StackLayout>
+                        <Label Text="Edad" FontSize="30" FontAttributes="Bold" TextColor="White"></Label>
+                        <Entry Text="{Binding parametrosRecibe.Edad}" TextColor="White" HorizontalOptions="Center" x:Name="Edad"></Entry>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Text="Direccion" FontSize="30" FontAttributes="Bold" TextColor="White"></Label>
+                        <Entry Text="{Binding parametrosRecibe.Direccion}" TextColor="White" HorizontalOptions="Center" x:Name="Direccion"></Entry>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Puesto" FontSize="30" FontAttributes="Bold" TextColor="White"></Label>
+                        <Entry Text="{Binding parametrosRecibe.Puesto}" TextColor="White" HorizontalOptions="Center" x:Name="Puesto"></Entry>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+            <Frame CornerRadius="30"
+                   Margin="10,20,10,0"
+                   HeightRequest="65"
+                   HasShadow="False"
+                   Padding="0">
+                <Grid ColumnDefinitions="*,*" BackgroundColor="#0099AA">
+                    <Button Text="Modificar"
+                            BackgroundColor="#5adf77" CornerRadius="30" FontAttributes="Bold"
+                            Margin="-5,0,0,0" TextColor="White" Command="{Binding Modificarcomand}"></Button>
+                    <Button Text="Eliminar" Grid.Column="1"
+                            BackgroundColor="red" TextColor="White" CornerRadius="30" FontAttributes="Bold"
+                            Margin="-5,0,0,0" Command="{Binding EliminarEmpleadoComand}"></Button>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>
